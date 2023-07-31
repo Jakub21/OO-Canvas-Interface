@@ -2,7 +2,16 @@
   "name": "@jakub21/oci",
   "version": "1.3.0",
   "description": "Object-oriented Canvas Inteface",
-  "main": "oci.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "browserify ./webIndex.js -o ./build/oci.js -v",
+    "watch": "watchify ./webIndex.js -o ./build/oci.js -v",
+    "test": "node --no-warnings --experimental-vm-modules C:/Users/Disk/AppData/Roaming/npm/node_modules/jest/bin/jest.js --config D:/Code/Repositories/Canvas-App/jest.config.js --testMatch D:/Code/Repositories/Canvas-App/tests/** "
+  },
   "author": "Jakub21",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@jest/globals": "^29.4.3"
+  }
 }
